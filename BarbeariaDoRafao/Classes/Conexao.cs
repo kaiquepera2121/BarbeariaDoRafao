@@ -15,7 +15,7 @@ namespace BarbeariaDoRafao.Classes
         #region Variáveis
 
         //String de Conexão                                     Informações CHUMBADAS - HardCode
-        private static string _strConexao = "";
+        private static string _strConexao = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=ProjetoN22;User ID=sa;Password=123456";
 
         //Variáveis de uso (podem ou não serem usadas ao decorrer do projeto)
         public SqlConnection conexao = new SqlConnection(_strConexao);
