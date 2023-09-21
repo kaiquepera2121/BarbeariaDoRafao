@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarbeariaDoRafao.Classes
 {
-    internal class Funcionario : Usuarios
+    public class Funcionario : Usuarios
     {
         #region Proprietarios
 
@@ -30,12 +30,13 @@ namespace BarbeariaDoRafao.Classes
 
         }
 
-        public Funcionario(string nome, string email, string senha,int nivelAcesso,DateTime dtNascimento,DateTime dtAdimissao,DateTime dtDemissao,double salario, bool ativo) : base(nome, email, senha, ativo)
+        public Funcionario(int id,string nome, string email, string senha,int nivelAcesso,DateTime dtNascimento,DateTime dtAdimissao,DateTime dtDemissao,double salario, bool ativo) : base(id,nome, email, senha, ativo)
         {
             NivelAcesso = nivelAcesso;
             DtNascimento = dtNascimento;
             DtDemissao = dtDemissao;
             Salario = salario;
+      
         }
 
         #endregion

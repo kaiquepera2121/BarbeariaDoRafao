@@ -9,6 +9,7 @@ namespace BarbeariaDoRafao.Classes
     internal class Cliente : Usuarios
     {
 
+
         #region Propriedades
 
 
@@ -21,12 +22,12 @@ namespace BarbeariaDoRafao.Classes
 
         #region Construtores
 
-        public Cliente()
+        public Cliente() 
         {
 
         }
 
-        public Cliente(string nome, string email, string senha,string genero, bool ativo) : base(nome, email, senha, ativo)
+        public Cliente(int id,string nome, string email, string senha,string genero, bool ativo) : base(id,nome, email, senha, ativo)
         {
             Genero = genero;
         }
