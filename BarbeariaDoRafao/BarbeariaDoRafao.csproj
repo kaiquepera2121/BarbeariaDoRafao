@@ -51,6 +51,12 @@
     <Compile Include="Classes\Crypto.cs" />
     <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Usuarios.cs" />
+    <Compile Include="Telas\CadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\CadastrarCliente.Designer.cs">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\CadastrarCliente.resx">
+      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>

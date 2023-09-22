@@ -32,13 +32,13 @@
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarServiçoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmCadastrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmCadastrarCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmCadastrarFuncionario = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmCadastarServico = new System.Windows.Forms.ToolStripMenuItem();
             this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.genrenciarAgendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.relaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmGerenciarAgenda = new System.Windows.Forms.ToolStripMenuItem();
+            this.TsmRelatorio = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.TslUserNome = new System.Windows.Forms.ToolStripStatusLabel();
@@ -54,9 +54,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastroToolStripMenuItem,
-            this.cadastroToolStripMenuItem1,
+            this.TsmCadastrar,
             this.aToolStripMenuItem,
-            this.relaToolStripMenuItem});
+            this.TsmRelatorio});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(774, 24);
@@ -75,63 +75,64 @@
             // editarPerfilToolStripMenuItem
             // 
             this.editarPerfilToolStripMenuItem.Name = "editarPerfilToolStripMenuItem";
-            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarPerfilToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.editarPerfilToolStripMenuItem.Text = "Editar Perfil";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // cadastroToolStripMenuItem1
+            // TsmCadastrar
             // 
-            this.cadastroToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarClienteToolStripMenuItem,
-            this.cadastrarFuncionárioToolStripMenuItem,
-            this.cadastrarServiçoToolStripMenuItem});
-            this.cadastroToolStripMenuItem1.Name = "cadastroToolStripMenuItem1";
-            this.cadastroToolStripMenuItem1.Size = new System.Drawing.Size(66, 20);
-            this.cadastroToolStripMenuItem1.Text = "Cadastro";
+            this.TsmCadastrar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TsmCadastrarCliente,
+            this.TsmCadastrarFuncionario,
+            this.TsmCadastarServico});
+            this.TsmCadastrar.Name = "TsmCadastrar";
+            this.TsmCadastrar.Size = new System.Drawing.Size(66, 20);
+            this.TsmCadastrar.Text = "Cadastro";
             // 
-            // cadastrarClienteToolStripMenuItem
+            // TsmCadastrarCliente
             // 
-            this.cadastrarClienteToolStripMenuItem.Name = "cadastrarClienteToolStripMenuItem";
-            this.cadastrarClienteToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.cadastrarClienteToolStripMenuItem.Text = "Cadastrar Cliente";
+            this.TsmCadastrarCliente.Name = "TsmCadastrarCliente";
+            this.TsmCadastrarCliente.Size = new System.Drawing.Size(190, 22);
+            this.TsmCadastrarCliente.Text = "Cadastrar Cliente";
+            this.TsmCadastrarCliente.Click += new System.EventHandler(this.TsmCadastrarCliente_Click);
             // 
-            // cadastrarFuncionárioToolStripMenuItem
+            // TsmCadastrarFuncionario
             // 
-            this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
-            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.TsmCadastrarFuncionario.Name = "TsmCadastrarFuncionario";
+            this.TsmCadastrarFuncionario.Size = new System.Drawing.Size(190, 22);
+            this.TsmCadastrarFuncionario.Text = "Cadastrar Funcionário";
             // 
-            // cadastrarServiçoToolStripMenuItem
+            // TsmCadastarServico
             // 
-            this.cadastrarServiçoToolStripMenuItem.Name = "cadastrarServiçoToolStripMenuItem";
-            this.cadastrarServiçoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.cadastrarServiçoToolStripMenuItem.Text = "Cadastrar Serviço";
+            this.TsmCadastarServico.Name = "TsmCadastarServico";
+            this.TsmCadastarServico.Size = new System.Drawing.Size(190, 22);
+            this.TsmCadastarServico.Text = "Cadastrar Serviço";
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.genrenciarAgendaToolStripMenuItem});
+            this.TsmGerenciarAgenda});
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
             this.aToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.aToolStripMenuItem.Text = "Agenda";
             // 
-            // genrenciarAgendaToolStripMenuItem
+            // TsmGerenciarAgenda
             // 
-            this.genrenciarAgendaToolStripMenuItem.Name = "genrenciarAgendaToolStripMenuItem";
-            this.genrenciarAgendaToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.genrenciarAgendaToolStripMenuItem.Text = "Genrenciar Agenda";
+            this.TsmGerenciarAgenda.Name = "TsmGerenciarAgenda";
+            this.TsmGerenciarAgenda.Size = new System.Drawing.Size(180, 22);
+            this.TsmGerenciarAgenda.Text = "Genrenciar Agenda";
             // 
-            // relaToolStripMenuItem
+            // TsmRelatorio
             // 
-            this.relaToolStripMenuItem.Name = "relaToolStripMenuItem";
-            this.relaToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.relaToolStripMenuItem.Text = "Relatório";
+            this.TsmRelatorio.Name = "TsmRelatorio";
+            this.TsmRelatorio.Size = new System.Drawing.Size(66, 20);
+            this.TsmRelatorio.Text = "Relatório";
             // 
             // statusStrip1
             // 
@@ -212,19 +213,19 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastroToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem TsmCadastrar;
         private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem relaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TsmRelatorio;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel TslUserNome;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel TslEmail;
         private System.Windows.Forms.ToolStripMenuItem editarPerfilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarServiçoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem genrenciarAgendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TsmCadastrarCliente;
+        private System.Windows.Forms.ToolStripMenuItem TsmCadastrarFuncionario;
+        private System.Windows.Forms.ToolStripMenuItem TsmCadastarServico;
+        private System.Windows.Forms.ToolStripMenuItem TsmGerenciarAgenda;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel TslPerfil;
     }

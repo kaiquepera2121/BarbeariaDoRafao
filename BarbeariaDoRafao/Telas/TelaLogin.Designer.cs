@@ -75,9 +75,9 @@
             this.TxtSenha.Location = new System.Drawing.Point(380, 286);
             this.TxtSenha.Multiline = true;
             this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(295, 42);
             this.TxtSenha.TabIndex = 5;
+            this.TxtSenha.UseSystemPasswordChar = true;
             // 
             // label1
             // 

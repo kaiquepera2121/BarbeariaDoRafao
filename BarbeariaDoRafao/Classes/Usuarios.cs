@@ -45,6 +45,40 @@ namespace BarbeariaDoRafao.Classes
 
         #region Métodos
 
+        public static List<Usuarios> BuscarUsuarios()
+        {
+            {
+                string query = string.Format("SELECT * FROM Cliente");
+                Conexao cn = new Conexao(query);
+
+                List<Usuarios> usuarios = new List<Usuarios>();
+
+                try
+                {
+                    cn.AbrirConexao();
+                    cn.dr = cn.comando.ExecuteReader();
+                    while (cn.dr.Read())
+                    {
+                        usuarios.Add(new Cliente()
+                        {
+                            Id = Convert.ToInt32(cn.dr[0]),
+                            Nome = cn.dr[1].ToString(),
+                            Email = cn.dr[2].ToString(),
+                            Senha = cn.dr[3].ToString(),
+                            Genero = cn.dr[4].ToString(),
+                            Ativo = Convert.ToBoolean(cn.dr[5])
+                        });
+                    }
+                    return usuarios;
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
+            
         public static Usuarios RealizarLogin(string email,string senha) 
         {
             string query = string.Format($"SELECT * FROM Funcionario WHERE Email = '{email}'");
@@ -102,7 +136,7 @@ namespace BarbeariaDoRafao.Classes
             }
         }
 
-
+        
         #endregion
     }
 }

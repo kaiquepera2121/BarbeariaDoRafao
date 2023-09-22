@@ -22,12 +22,12 @@ namespace BarbeariaDoRafao.Classes
 
         #region Construtores
 
-        public Cliente() 
+        public Cliente()
         {
 
         }
 
-        public Cliente(int id,string nome, string email, string senha,string genero, bool ativo) : base(id,nome, email, senha, ativo)
+        public Cliente(int id, string nome, string email, string senha, string genero, bool ativo) : base(id, nome, email, senha, ativo)
         {
             Genero = genero;
         }
@@ -37,8 +37,44 @@ namespace BarbeariaDoRafao.Classes
 
         #region Métodos
 
+        public void Cadastrar(List<Cliente> clientes)
+        {
+            string query = string.Format($" INSERT INTO Cliente VALUES ('{Nome}','{Email}','{Crypto.Sha256("123")}','{Genero}',1)");
+            query += "; SELECT SCOPE_IDENTITY()";
+            Conexao cn = new Conexao(query);
+
+            try
+            {
+                cn.AbrirConexao();
+                Id = Convert.ToInt32(cn.comando.ExecuteScalar());
+                clientes.Add(this);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
-        #endregion
+        public void Excluir()
+        {
+            string query = string.Format($"UPDATE Cliente SET Ativo = 0 WHERE Id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+            #endregion
+        }
     }
 }
