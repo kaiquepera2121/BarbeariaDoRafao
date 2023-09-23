@@ -41,7 +41,7 @@ namespace BarbeariaDoRafao.Telas
         private void button1_Click(object sender, EventArgs e)
         {
             string genero;
-            if (ChxMulher.Checked)
+            if (RdbMulher.Checked)
             {
                 genero = "Mulher";
             }
@@ -54,7 +54,7 @@ namespace BarbeariaDoRafao.Telas
 
             cliente.Cadastrar(_clientes);
             LimparCampos();
-            
+            CarregarDgvClientes();
         }
 
         private void ConfiguraDgvClientes()
@@ -82,6 +82,8 @@ namespace BarbeariaDoRafao.Telas
             DgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             DgvUsuarios.ColumnHeadersHeight = 35;
             DgvUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            
         }
 
         private void CarregarDgvClientes(List<Cliente> clientes = null)
@@ -91,6 +93,10 @@ namespace BarbeariaDoRafao.Telas
             foreach (Cliente cliente in clientes == null ? _clientes : clientes)
             {
                 DgvUsuarios.Rows.Add(cliente.Id, cliente.Nome, cliente.Email, cliente.Genero, cliente.Ativo);
+                if (!cliente.Ativo)
+                    DgvUsuarios.Rows[DgvUsuarios.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Red;
+                else
+                    DgvUsuarios.Rows[DgvUsuarios.Rows.Count - 1].DefaultCellStyle.BackColor = Color.LightGreen;
             }
      
         }
@@ -120,8 +126,9 @@ namespace BarbeariaDoRafao.Telas
         {
             TxtEmail.Clear();
             TxtNome.Clear();
-            ChxMulher.Checked = false;
-            CbxHomen.Checked = true;
+            RdbMulher.Checked = false;
+            RdbHomem.Checked = true;
+            TxtId.Clear();
         }
 
         private void DgvUsuarios_DoubleClick(object sender, EventArgs e)
@@ -130,8 +137,8 @@ namespace BarbeariaDoRafao.Telas
             {
                 if(_clienteSelecionado.Ativo == true)
                 {
-                     DialogResult dr = MessageBox.Show($"Você realmente deseja remover {_clienteSelecionado.Nome}?"
-                  , "Remover Aluno"
+                     DialogResult dr = MessageBox.Show($"Você realmente deseja remover o cliente {_clienteSelecionado.Nome}?"
+                  , "Remover Cliente"
                   , MessageBoxButtons.YesNo
                   , MessageBoxIcon.Question);
 
@@ -143,8 +150,24 @@ namespace BarbeariaDoRafao.Telas
                         _clienteSelecionado.Excluir();
                         CarregarDgvClientes();
                     }
-                }      
-  
+                }
+                else
+                {
+                    DialogResult dr = MessageBox.Show($"Você realmente deseja ativar esse cliente {_clienteSelecionado.Nome}?"
+                        , "Ativar CLiente"
+                        , MessageBoxButtons.YesNo
+                        , MessageBoxIcon.Question);
+
+
+                    if (dr == DialogResult.Yes)
+                    {
+                        //TODO 2908 - Realizar o update do ativo para 0 de quem está selecionado.
+                        _clienteSelecionado.Ativo = true;
+                        _clienteSelecionado.Ativar();
+                        CarregarDgvClientes();
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -154,6 +177,8 @@ namespace BarbeariaDoRafao.Telas
                                 MessageBoxIcon.Error);
             }
         }
+
+
 
         private void DgvUsuarios_SelectionChanged(object sender, EventArgs e)
         {
@@ -167,15 +192,17 @@ namespace BarbeariaDoRafao.Telas
                 TxtEmail.Text = _clienteSelecionado.Email;
                 TxtNome.Text = _clienteSelecionado.Nome;
                 TxtId.Text = _clienteSelecionado.Id.ToString();
+                BtnCadastrar.Enabled = false;
+                BtnAlterar.Enabled = true;
                 if (_clienteSelecionado.Genero == "Masculino")
                 {
-                    CbxHomen.Checked = true;
-                    ChxMulher.Checked = false;
+                    RdbHomem.Checked = true;
+                    RdbMulher.Checked = false;
                 }
                 else
                 {
-                    CbxHomen.Checked = false;
-                    ChxMulher.Checked = true;
+                    RdbHomem.Checked = false;
+                    RdbMulher.Checked = true;
                 }
 
             }
@@ -192,6 +219,35 @@ namespace BarbeariaDoRafao.Telas
         {
             CarregarDgvClientes();
             TmrCadastro.Start();
+        }
+
+        private void BtnAlterar_Click(object sender, EventArgs e)
+        {
+            _clienteSelecionado.Nome = TxtNome.Text;
+            _clienteSelecionado.Email = TxtEmail.Text;
+            _clienteSelecionado.Genero = RdbHomem.Checked == true ? "Masculino" : "Feminino";
+
+            _clienteSelecionado.Alterar();
+            CarregarDgvClientes();
+
+        }
+
+        private void BtnLimapr_Click(object sender, EventArgs e)
+        {
+            TxtNome.Clear();
+            TxtEmail.Clear();
+            RdbHomem.Checked = true;
+            RdbMulher.Checked = false;
+            BtnCadastrar.Enabled = true;
+            BtnAlterar.Enabled = false;
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Cliente> lista = Cliente.Buscar(_clientes,CbbBuscar.SelectedIndex,TxtBuscar.Text);
+            CarregarDgvClientes(lista);
+
         }
     }
 }

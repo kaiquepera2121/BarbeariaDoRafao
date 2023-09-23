@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.QdoLabel = new System.Windows.Forms.Label();
-            this.CheMostrarSenha = new System.Windows.Forms.CheckBox();
+            this.ChxMostrarSenha = new System.Windows.Forms.CheckBox();
             this.TxtEmail = new System.Windows.Forms.TextBox();
-            this.TxtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.TxtSenha = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // QdoLabel
@@ -46,18 +45,18 @@
             this.QdoLabel.Size = new System.Drawing.Size(370, 307);
             this.QdoLabel.TabIndex = 0;
             // 
-            // CheMostrarSenha
+            // ChxMostrarSenha
             // 
-            this.CheMostrarSenha.AutoSize = true;
-            this.CheMostrarSenha.BackColor = System.Drawing.Color.Gray;
-            this.CheMostrarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheMostrarSenha.ForeColor = System.Drawing.Color.Transparent;
-            this.CheMostrarSenha.Location = new System.Drawing.Point(383, 336);
-            this.CheMostrarSenha.Name = "CheMostrarSenha";
-            this.CheMostrarSenha.Size = new System.Drawing.Size(85, 16);
-            this.CheMostrarSenha.TabIndex = 3;
-            this.CheMostrarSenha.Text = "Mostrar Senha";
-            this.CheMostrarSenha.UseVisualStyleBackColor = false;
+            this.ChxMostrarSenha.AutoSize = true;
+            this.ChxMostrarSenha.BackColor = System.Drawing.Color.Gray;
+            this.ChxMostrarSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChxMostrarSenha.ForeColor = System.Drawing.Color.Transparent;
+            this.ChxMostrarSenha.Location = new System.Drawing.Point(383, 336);
+            this.ChxMostrarSenha.Name = "ChxMostrarSenha";
+            this.ChxMostrarSenha.Size = new System.Drawing.Size(85, 16);
+            this.ChxMostrarSenha.TabIndex = 3;
+            this.ChxMostrarSenha.Text = "Mostrar Senha";
+            this.ChxMostrarSenha.UseVisualStyleBackColor = false;
             // 
             // TxtEmail
             // 
@@ -68,16 +67,6 @@
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(295, 42);
             this.TxtEmail.TabIndex = 4;
-            // 
-            // TxtSenha
-            // 
-            this.TxtSenha.Font = new System.Drawing.Font("Corbel Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSenha.Location = new System.Drawing.Point(380, 286);
-            this.TxtSenha.Multiline = true;
-            this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.Size = new System.Drawing.Size(295, 42);
-            this.TxtSenha.TabIndex = 5;
-            this.TxtSenha.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -102,18 +91,16 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBox1
+            // TxtSenha
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.Gray;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Transparent;
-            this.checkBox1.Location = new System.Drawing.Point(571, 335);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(104, 16);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.Text = "Esqueceu a senha?";
-            this.checkBox1.UseVisualStyleBackColor = false;
+            this.TxtSenha.Font = new System.Drawing.Font("Corbel Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSenha.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.TxtSenha.Location = new System.Drawing.Point(379, 285);
+            this.TxtSenha.Multiline = true;
+            this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.Size = new System.Drawing.Size(295, 42);
+            this.TxtSenha.TabIndex = 8;
+            this.TxtSenha.UseSystemPasswordChar = true;
             // 
             // TelaLogin
             // 
@@ -122,12 +109,11 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::BarbeariaDoRafao.Properties.Resources.smooth_gray_background;
             this.ClientSize = new System.Drawing.Size(1037, 625);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.TxtEmail);
-            this.Controls.Add(this.CheMostrarSenha);
+            this.Controls.Add(this.ChxMostrarSenha);
             this.Controls.Add(this.QdoLabel);
             this.Name = "TelaLogin";
             this.Text = "TelaLogin";
@@ -139,12 +125,11 @@
         #endregion
 
         private System.Windows.Forms.Label QdoLabel;
-        private System.Windows.Forms.CheckBox CheMostrarSenha;
+        private System.Windows.Forms.CheckBox ChxMostrarSenha;
         private System.Windows.Forms.TextBox TxtEmail;
-        private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox TxtSenha;
     }
 }
 

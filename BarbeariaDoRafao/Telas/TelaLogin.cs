@@ -23,6 +23,8 @@ namespace BarbeariaDoRafao
         {
             try
             {
+ 
+
                 Usuarios usuarios = Usuarios.RealizarLogin(TxtEmail.Text, TxtSenha.Text);
 
                 TelaPrincipal principal = new TelaPrincipal((Funcionario)usuarios);
@@ -40,6 +42,7 @@ namespace BarbeariaDoRafao
 
             }
         }
+
 
     }
 }

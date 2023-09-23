@@ -57,6 +57,74 @@ namespace BarbeariaDoRafao.Classes
         }
 
 
+        public void Alterar()
+        {
+            string query = string.Format($"Update Cliente set Nome = '{Nome}',Email = '{Email}',Genero = '{Genero}' where id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+        }
+
+
+        public void Ativar()
+        {
+            string query = string.Format($"UPDATE Cliente SET Ativo = 1 WHERE Id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+
+
+        }
+
+        public static List<Cliente> Buscar(List<Cliente> clientes, int indexCbbBuscar, string texto)
+        {
+            switch (indexCbbBuscar)
+            {
+                case 0:
+
+                    return clientes.Where(a => a.Nome.ToUpper().Contains(texto.ToUpper())).ToList();
+              
+                case 1:
+                
+
+                    return clientes.Where(a => a.Email.Contains(texto)).ToList();
+
+         
+                case 2:
+  
+
+                    return clientes.Where(a => a.Id == Convert.ToInt32(texto)).ToList();
+
+                default:
+              
+
+                    return clientes;
+
+            }
+        }
+
         public void Excluir()
         {
             string query = string.Format($"UPDATE Cliente SET Ativo = 0 WHERE Id = {Id}");
@@ -74,7 +142,9 @@ namespace BarbeariaDoRafao.Classes
             {
                 cn.FecharConexao();
             }
-            #endregion
+
+          
         }
+        #endregion
     }
 }
