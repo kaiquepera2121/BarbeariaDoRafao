@@ -34,6 +34,7 @@ namespace BarbeariaDoRafao.Classes
         {
             NivelAcesso = nivelAcesso;
             DtNascimento = dtNascimento;
+            DtAdimissao = dtAdimissao;
             DtDemissao = dtDemissao;
             Salario = salario;
       
@@ -44,7 +45,85 @@ namespace BarbeariaDoRafao.Classes
 
         #region Métodos
 
+        public void Cadastrar(List<Funcionario> funcionarios)
+        {
+            string query = string.Format($" INSERT INTO Funcionario VALUES ('{Nome}','{Email}','{Crypto.Sha256("123")}',{NivelAcesso},'{DtNascimento}','{DtAdimissao}','',{Salario},1)");
+            query += "; SELECT SCOPE_IDENTITY()";
+            Conexao cn = new Conexao(query);
 
+            try
+            {
+                cn.AbrirConexao();
+                Id = Convert.ToInt32(cn.comando.ExecuteScalar());
+                funcionarios.Add(this);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void Alterar()
+        {
+            string query = string.Format($"UPDATE Funcionario SET Nome = '{Nome}', Email = '{Email}', DtNascimento = '{DtNascimento}' WHERE Id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+        }
+
+        public void Excluir()
+        {
+            string query = string.Format($"UPDATE Funcionario SET Ativo = 0 WHERE Id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+
+
+        }
+
+        public void Ativar()
+        {
+            string query = string.Format($"UPDATE Funcionario SET Ativo = 1 WHERE Id = {Id}");
+            Conexao cn = new Conexao(query);
+            try
+            {
+                cn.AbrirConexao();
+                cn.comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.FecharConexao();
+            }
+
+
+        }
 
         #endregion
 

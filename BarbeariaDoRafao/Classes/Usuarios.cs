@@ -45,11 +45,11 @@ namespace BarbeariaDoRafao.Classes
 
         #region Métodos
 
-        public static List<Usuarios> BuscarUsuarios()
+        public static List<Usuarios> BuscarUsuarios(string nomeTabela)
         {        
             {
                
-                string query = string.Format("SELECT * FROM Cliente");
+                string query = string.Format($"SELECT * FROM {nomeTabela}");
                 Conexao cn = new Conexao(query);
 
                 List<Usuarios> usuarios = new List<Usuarios>();
@@ -60,16 +60,36 @@ namespace BarbeariaDoRafao.Classes
                     cn.dr = cn.comando.ExecuteReader();
                     while (cn.dr.Read())
                     {
-                        usuarios.Add(new Cliente()
+                        if (nomeTabela == "Cliente") 
                         {
-                            Id = Convert.ToInt32(cn.dr[0]),
-                            Nome = cn.dr[1].ToString(),
-                            Email = cn.dr[2].ToString(),
-                            Senha = cn.dr[3].ToString(),
-                            Genero = cn.dr[4].ToString(),
-                            Ativo = Convert.ToBoolean(cn.dr[5]),                          
-                            
-                        });
+                            usuarios.Add(new Cliente()
+                            {
+                                Id = Convert.ToInt32(cn.dr[0]),
+                                Nome = cn.dr[1].ToString(),
+                                Email = cn.dr[2].ToString(),
+                                Senha = cn.dr[3].ToString(),
+                                Genero = cn.dr[4].ToString(),
+                                Ativo = Convert.ToBoolean(cn.dr[5]),
+
+                            });
+                        }
+                        else
+                        {
+                            usuarios.Add(new Funcionario()
+                            {
+                                Id = Convert.ToInt32(cn.dr[0]),
+                                Nome = cn.dr[1].ToString(),
+                                Email = cn.dr[2].ToString(),
+                                Senha= cn.dr[3].ToString(),
+                                NivelAcesso = Convert.ToInt32(cn.dr[4]),
+                                DtNascimento = Convert.ToDateTime(cn.dr[5]),
+                                DtAdimissao = Convert.ToDateTime(cn.dr[6]),
+                                DtDemissao = Convert.ToDateTime(cn.dr[7]),
+                                Salario = Convert.ToDouble(cn.dr[8]),
+                                Ativo = Convert.ToBoolean((cn.dr[9]))
+                            });
+                        }
+
                     }
                     return usuarios;
                 }
@@ -80,6 +100,7 @@ namespace BarbeariaDoRafao.Classes
                 }
             }
         }
+
 
 
         public static Usuarios RealizarLogin(string email,string senha) 

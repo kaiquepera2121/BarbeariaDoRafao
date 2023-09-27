@@ -107,6 +107,7 @@
             this.TsmCadastrarFuncionario.Name = "TsmCadastrarFuncionario";
             this.TsmCadastrarFuncionario.Size = new System.Drawing.Size(190, 22);
             this.TsmCadastrarFuncionario.Text = "Cadastrar Funcionário";
+            this.TsmCadastrarFuncionario.Click += new System.EventHandler(this.TsmCadastrarFuncionario_Click);
             // 
             // TsmCadastarServico
             // 
@@ -125,7 +126,7 @@
             // TsmGerenciarAgenda
             // 
             this.TsmGerenciarAgenda.Name = "TsmGerenciarAgenda";
-            this.TsmGerenciarAgenda.Size = new System.Drawing.Size(180, 22);
+            this.TsmGerenciarAgenda.Size = new System.Drawing.Size(175, 22);
             this.TsmGerenciarAgenda.Text = "Genrenciar Agenda";
             // 
             // TsmRelatorio

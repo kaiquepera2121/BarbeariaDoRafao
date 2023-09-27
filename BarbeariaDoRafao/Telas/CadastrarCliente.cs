@@ -22,7 +22,7 @@ namespace BarbeariaDoRafao.Telas
 
             try
             {
-                _clientes = Usuarios.BuscarUsuarios().ConvertAll(u => (Cliente)u);
+                _clientes = Usuarios.BuscarUsuarios("Cliente").ConvertAll(u => (Cliente)u);
             }
             catch (Exception ex)
             {
@@ -129,6 +129,7 @@ namespace BarbeariaDoRafao.Telas
             RdbMulher.Checked = false;
             RdbHomem.Checked = true;
             TxtId.Clear();
+           
         }
 
         private void DgvUsuarios_DoubleClick(object sender, EventArgs e)
