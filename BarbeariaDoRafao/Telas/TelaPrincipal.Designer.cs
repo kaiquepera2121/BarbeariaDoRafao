@@ -212,15 +212,9 @@
             this.toolStripStatusLabel2,
             this.TslEmail,
             this.toolStripStatusLabel4,
-<<<<<<< Updated upstream
-            this.toolStripStatusLabel5,
-            this.toolStripStatusLabel6});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 775);
-=======
             this.TslAcesso,
             this.TslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
->>>>>>> Stashed changes
+            this.statusStrip1.Location = new System.Drawing.Point(0, 775);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1460, 27);
             this.statusStrip1.TabIndex = 22;
@@ -278,15 +272,6 @@
             // 
             // TslDataHora
             // 
-<<<<<<< Updated upstream
-            this.toolStripStatusLabel6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(734, 22);
-            this.toolStripStatusLabel6.Spring = true;
-            this.toolStripStatusLabel6.Text = "27/09/2023 00:00";
-            this.toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-=======
             this.TslDataHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslDataHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.TslDataHora.Name = "TslDataHora";
@@ -294,7 +279,6 @@
             this.TslDataHora.Spring = true;
             this.TslDataHora.Text = "27/09/2023 00:00";
             this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
->>>>>>> Stashed changes
             // 
             // pictureBox1
             // 
@@ -397,10 +381,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-<<<<<<< Updated upstream
-            this.ClientSize = new System.Drawing.Size(1460, 802);
-            this.Controls.Add(this.button2);
-=======
+
             this.ClientSize = new System.Drawing.Size(1125, 679);
             this.Controls.Add(this.BtnGerenciar);
             this.Controls.Add(this.BtnClientes);
@@ -408,7 +389,6 @@
             this.Controls.Add(this.BtnFuncionarios);
             this.Controls.Add(this.BtnRelatorio);
             this.Controls.Add(this.BtnAgenda);
->>>>>>> Stashed changes
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
