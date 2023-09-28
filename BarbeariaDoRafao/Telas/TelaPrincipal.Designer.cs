@@ -34,16 +34,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaPrincipal));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnPerfil = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,14 +47,19 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.TslUserLogado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TslNome = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TslEmail = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TslAcesso = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TslDataHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnAgenda = new System.Windows.Forms.Button();
+            this.BtnRelatorio = new System.Windows.Forms.Button();
+            this.BtnFuncionarios = new System.Windows.Forms.Button();
+            this.BtnFaturamento = new System.Windows.Forms.Button();
+            this.BtnClientes = new System.Windows.Forms.Button();
+            this.BtnGerenciar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,7 +74,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Indigo;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 16);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 7);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(238, 642);
             this.dataGridView1.TabIndex = 0;
@@ -90,67 +90,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Raff\'a Barber";
             // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Indigo;
-            this.label2.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(41, 221);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 36);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Agenda ";
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.Indigo;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
-            this.label3.Location = new System.Drawing.Point(41, 300);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 36);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Relatórios";
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.Indigo;
-            this.label5.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(41, 374);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 36);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Funcionários";
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Indigo;
-            this.label6.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(41, 444);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 36);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Faturamento";
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.Indigo;
-            this.label7.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(42, 516);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(170, 36);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Clientes";
-            // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Indigo;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Silver;
-            this.label8.Location = new System.Drawing.Point(71, 600);
+            this.label8.Location = new System.Drawing.Point(71, 607);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 34);
             this.label8.TabIndex = 9;
@@ -161,7 +106,7 @@
             this.label9.BackColor = System.Drawing.Color.Indigo;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Silver;
-            this.label9.Location = new System.Drawing.Point(174, 601);
+            this.label9.Location = new System.Drawing.Point(174, 606);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 34);
             this.label9.TabIndex = 10;
@@ -189,18 +134,18 @@
             this.label10.TabIndex = 15;
             this.label10.Text = "Home ";
             // 
-            // button1
+            // BtnPerfil
             // 
-            this.button1.AutoSize = true;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(941, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 38);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Perfil";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnPerfil.AutoSize = true;
+            this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerfil.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnPerfil.Location = new System.Drawing.Point(941, 16);
+            this.BtnPerfil.Name = "BtnPerfil";
+            this.BtnPerfil.Size = new System.Drawing.Size(165, 38);
+            this.BtnPerfil.TabIndex = 17;
+            this.BtnPerfil.Text = "Perfil";
+            this.BtnPerfil.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
@@ -263,13 +208,19 @@
             this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.TslUserLogado,
+            this.TslNome,
             this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3,
+            this.TslEmail,
             this.toolStripStatusLabel4,
+<<<<<<< Updated upstream
             this.toolStripStatusLabel5,
             this.toolStripStatusLabel6});
             this.statusStrip1.Location = new System.Drawing.Point(0, 775);
+=======
+            this.TslAcesso,
+            this.TslDataHora});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
+>>>>>>> Stashed changes
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1460, 27);
             this.statusStrip1.TabIndex = 22;
@@ -284,14 +235,14 @@
             this.toolStripStatusLabel1.Text = "User:";
             this.toolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // TslUserLogado
+            // TslNome
             // 
-            this.TslUserLogado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TslUserLogado.ForeColor = System.Drawing.Color.Teal;
-            this.TslUserLogado.Name = "TslUserLogado";
-            this.TslUserLogado.Size = new System.Drawing.Size(207, 22);
-            this.TslUserLogado.Text = "Raffael Fernando Moreira";
-            this.TslUserLogado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TslNome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TslNome.ForeColor = System.Drawing.Color.Teal;
+            this.TslNome.Name = "TslNome";
+            this.TslNome.Size = new System.Drawing.Size(207, 22);
+            this.TslNome.Text = "Raffael Fernando Moreira";
+            this.TslNome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStripStatusLabel2
             // 
@@ -301,13 +252,13 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(67, 22);
             this.toolStripStatusLabel2.Text = "E-mail:";
             // 
-            // toolStripStatusLabel3
+            // TslEmail
             // 
-            this.toolStripStatusLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.Teal;
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(197, 22);
-            this.toolStripStatusLabel3.Text = "raffanoreira@gmail.com";
+            this.TslEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TslEmail.ForeColor = System.Drawing.Color.Teal;
+            this.TslEmail.Name = "TslEmail";
+            this.TslEmail.Size = new System.Drawing.Size(197, 22);
+            this.TslEmail.Text = "raffanoreira@gmail.com";
             // 
             // toolStripStatusLabel4
             // 
@@ -317,16 +268,17 @@
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(68, 22);
             this.toolStripStatusLabel4.Text = "Profile:";
             // 
-            // toolStripStatusLabel5
+            // TslAcesso
             // 
-            this.toolStripStatusLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel5.ForeColor = System.Drawing.Color.Teal;
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(120, 22);
-            this.toolStripStatusLabel5.Text = "Administrador";
+            this.TslAcesso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TslAcesso.ForeColor = System.Drawing.Color.Teal;
+            this.TslAcesso.Name = "TslAcesso";
+            this.TslAcesso.Size = new System.Drawing.Size(120, 22);
+            this.TslAcesso.Text = "Administrador";
             // 
-            // toolStripStatusLabel6
+            // TslDataHora
             // 
+<<<<<<< Updated upstream
             this.toolStripStatusLabel6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
@@ -334,31 +286,110 @@
             this.toolStripStatusLabel6.Spring = true;
             this.toolStripStatusLabel6.Text = "27/09/2023 00:00";
             this.toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+=======
+            this.TslDataHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TslDataHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.TslDataHora.Name = "TslDataHora";
+            this.TslDataHora.Size = new System.Drawing.Size(368, 22);
+            this.TslDataHora.Spring = true;
+            this.TslDataHora.Text = "27/09/2023 00:00";
+            this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+>>>>>>> Stashed changes
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Indigo;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(68, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(72, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(110, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // BtnAgenda
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Indigo;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(48, 169);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(165, 38);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Profile";
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnAgenda.AutoSize = true;
+            this.BtnAgenda.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgenda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgenda.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnAgenda.Location = new System.Drawing.Point(46, 228);
+            this.BtnAgenda.Name = "BtnAgenda";
+            this.BtnAgenda.Size = new System.Drawing.Size(165, 50);
+            this.BtnAgenda.TabIndex = 25;
+            this.BtnAgenda.Text = "Agenda";
+            this.BtnAgenda.UseVisualStyleBackColor = false;
+            // 
+            // BtnRelatorio
+            // 
+            this.BtnRelatorio.AutoSize = true;
+            this.BtnRelatorio.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRelatorio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRelatorio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnRelatorio.Location = new System.Drawing.Point(46, 297);
+            this.BtnRelatorio.Name = "BtnRelatorio";
+            this.BtnRelatorio.Size = new System.Drawing.Size(165, 50);
+            this.BtnRelatorio.TabIndex = 26;
+            this.BtnRelatorio.Text = "Relatórios";
+            this.BtnRelatorio.UseVisualStyleBackColor = false;
+            // 
+            // BtnFuncionarios
+            // 
+            this.BtnFuncionarios.AutoSize = true;
+            this.BtnFuncionarios.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFuncionarios.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFuncionarios.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnFuncionarios.Location = new System.Drawing.Point(47, 376);
+            this.BtnFuncionarios.Name = "BtnFuncionarios";
+            this.BtnFuncionarios.Size = new System.Drawing.Size(165, 50);
+            this.BtnFuncionarios.TabIndex = 27;
+            this.BtnFuncionarios.Text = "Funcionários";
+            this.BtnFuncionarios.UseVisualStyleBackColor = false;
+            // 
+            // BtnFaturamento
+            // 
+            this.BtnFaturamento.AutoSize = true;
+            this.BtnFaturamento.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnFaturamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFaturamento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFaturamento.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnFaturamento.Location = new System.Drawing.Point(45, 453);
+            this.BtnFaturamento.Name = "BtnFaturamento";
+            this.BtnFaturamento.Size = new System.Drawing.Size(165, 50);
+            this.BtnFaturamento.TabIndex = 28;
+            this.BtnFaturamento.Text = "Faturamento";
+            this.BtnFaturamento.UseVisualStyleBackColor = false;
+            // 
+            // BtnClientes
+            // 
+            this.BtnClientes.AutoSize = true;
+            this.BtnClientes.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClientes.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnClientes.Location = new System.Drawing.Point(45, 533);
+            this.BtnClientes.Name = "BtnClientes";
+            this.BtnClientes.Size = new System.Drawing.Size(165, 50);
+            this.BtnClientes.TabIndex = 29;
+            this.BtnClientes.Text = "Clientes";
+            this.BtnClientes.UseVisualStyleBackColor = false;
+            // 
+            // BtnGerenciar
+            // 
+            this.BtnGerenciar.AutoSize = true;
+            this.BtnGerenciar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.BtnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGerenciar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGerenciar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnGerenciar.Location = new System.Drawing.Point(48, 160);
+            this.BtnGerenciar.Name = "BtnGerenciar";
+            this.BtnGerenciar.Size = new System.Drawing.Size(165, 50);
+            this.BtnGerenciar.TabIndex = 30;
+            this.BtnGerenciar.Text = "Gerenciar Perfil";
+            this.BtnGerenciar.UseVisualStyleBackColor = false;
             // 
             // TelaPrincipal
             // 
@@ -366,24 +397,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1460, 802);
             this.Controls.Add(this.button2);
+=======
+            this.ClientSize = new System.Drawing.Size(1125, 679);
+            this.Controls.Add(this.BtnGerenciar);
+            this.Controls.Add(this.BtnClientes);
+            this.Controls.Add(this.BtnFaturamento);
+            this.Controls.Add(this.BtnFuncionarios);
+            this.Controls.Add(this.BtnRelatorio);
+            this.Controls.Add(this.BtnAgenda);
+>>>>>>> Stashed changes
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnPerfil);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.DoubleBuffered = true;
@@ -411,16 +447,11 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button BtnPerfil;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -429,14 +460,19 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel TslUserLogado;
+        private System.Windows.Forms.ToolStripStatusLabel TslNome;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel TslEmail;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripStatusLabel TslAcesso;
+        private System.Windows.Forms.ToolStripStatusLabel TslDataHora;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button BtnAgenda;
+        public System.Windows.Forms.Button BtnRelatorio;
+        public System.Windows.Forms.Button BtnFuncionarios;
+        public System.Windows.Forms.Button BtnFaturamento;
+        public System.Windows.Forms.Button BtnClientes;
+        public System.Windows.Forms.Button BtnGerenciar;
     }
 }
 
