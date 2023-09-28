@@ -13,8 +13,9 @@ namespace BarbeariaDoRafao.Telas
 {
     public partial class CadastrarFuncionario : Form
     {
-        Funcionario _funcionarioSelecionado;
-        List<Funcionario> _funcionario;
+       private Funcionario _funcionarioSelecionado;
+        private List<Funcionario> _funcionario;
+    
 
         public CadastrarFuncionario()
         {
@@ -50,7 +51,6 @@ namespace BarbeariaDoRafao.Telas
             DgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             DgvUsuarios.ColumnHeadersHeight = 35;
             DgvUsuarios.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            
 
         }
 
@@ -93,17 +93,17 @@ namespace BarbeariaDoRafao.Telas
             _funcionarioSelecionado.Nome = TxtNome.Text;
             _funcionarioSelecionado.Email = txtEmail.Text;
             _funcionarioSelecionado.DtNascimento = DtpDataNAscimento.Value;
-            //_funcionarioSelecionado.NivelAcesso = RdbBarbeiro.Checked == true ? 3 : 2 ;
 
-            //if (RdbBarbeiro.Checked)
-            //{
-            //    _funcionarioSelecionado.NivelAcesso = 3;
-            //}
-            //else
-            //{
-            //    _funcionarioSelecionado.NivelAcesso = 2;
-            //}
-
+            if(_funcionarioSelecionado.NivelAcesso == 3)
+            {
+                RdbBarbeiro.Checked = true;
+                RdbRecepcionista.Checked = false;
+            }
+            else if (_funcionarioSelecionado.NivelAcesso == 2)
+            {
+                RdbBarbeiro.Checked = false;
+                RdbRecepcionista.Checked = true;
+            }
             _funcionarioSelecionado.Alterar();
             CarregaDgvUsuarios();
 
@@ -123,8 +123,10 @@ namespace BarbeariaDoRafao.Telas
                 DgvUsuarios.Rows.Add(funcionario.Id, funcionario.Nome, funcionario.Email, funcionario.NivelAcesso, funcionario.DtNascimento, funcionario.Ativo);
                 if (!funcionario.Ativo)
                     DgvUsuarios.Rows[DgvUsuarios.Rows.Count - 1].DefaultCellStyle.BackColor = Color.LightCoral;
-            }
+                else
+                    DgvUsuarios.Rows[DgvUsuarios.Rows.Count - 1].DefaultCellStyle.BackColor = Color.LightGreen;
 
+            }
         }
 
         private void LimpaCampos()
@@ -134,6 +136,7 @@ namespace BarbeariaDoRafao.Telas
             RdbBarbeiro.Checked = true;
             RdbRecepcionista.Checked = false;
             TxtId.Clear();
+            TxtBuscar.Clear();
             DtpDataNAscimento.Value = new DateTime(1990, 1, 1);
             BtnCadastrar.Enabled = true;
             BtnAlterar.Enabled = false;
@@ -141,7 +144,7 @@ namespace BarbeariaDoRafao.Telas
 
         private void CadastrarFuncionario_Load(object sender, EventArgs e)
         {
-    
+            
 
             ConfiguraDgvUsuarios();
             CarregaDgvUsuarios();
@@ -230,6 +233,12 @@ namespace BarbeariaDoRafao.Telas
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCadastar_Click(object sender, EventArgs e)
+        {
+            List<Funcionario> lista = Funcionario.Buscar(_funcionario, CbbBuscar.SelectedIndex, TxtBuscar.Text);
+            CarregaDgvUsuarios(lista);
         }
     }
 }

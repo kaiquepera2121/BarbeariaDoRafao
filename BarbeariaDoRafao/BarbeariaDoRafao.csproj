@@ -51,7 +51,14 @@
     <Compile Include="Classes\Conexao.cs" />
     <Compile Include="Classes\Crypto.cs" />
     <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\Servicos.cs" />
     <Compile Include="Classes\Usuarios.cs" />
+    <Compile Include="Telas\CadastarServicoscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\CadastarServicoscs.Designer.cs">
+      <DependentUpon>CadastarServicoscs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\CadastrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,7 +82,7 @@
     <Compile Include="Telas\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\TelaPrincipal.designer.cs">
+    <Compile Include="Telas\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaPrincipal_OLD.cs">
@@ -94,6 +101,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\CadastarServicoscs.resx">
+      <DependentUpon>CadastarServicoscs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>

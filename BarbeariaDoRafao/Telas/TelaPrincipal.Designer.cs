@@ -208,7 +208,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(359, 150);
+            this.chart1.Location = new System.Drawing.Point(395, 169);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.ChartArea = "ChartArea1";
@@ -269,9 +269,9 @@
             this.toolStripStatusLabel4,
             this.toolStripStatusLabel5,
             this.toolStripStatusLabel6});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 775);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1125, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(1460, 27);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -330,7 +330,7 @@
             this.toolStripStatusLabel6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel6.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(399, 22);
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(734, 22);
             this.toolStripStatusLabel6.Spring = true;
             this.toolStripStatusLabel6.Text = "27/09/2023 00:00";
             this.toolStripStatusLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -366,7 +366,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1125, 679);
+            this.ClientSize = new System.Drawing.Size(1460, 802);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);

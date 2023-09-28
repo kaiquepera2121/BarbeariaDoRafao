@@ -114,6 +114,7 @@
             this.TsmCadastarServico.Name = "TsmCadastarServico";
             this.TsmCadastarServico.Size = new System.Drawing.Size(190, 22);
             this.TsmCadastarServico.Text = "Cadastrar Serviço";
+            this.TsmCadastarServico.Click += new System.EventHandler(this.TsmCadastarServico_Click);
             // 
             // aToolStripMenuItem
             // 
@@ -126,7 +127,7 @@
             // TsmGerenciarAgenda
             // 
             this.TsmGerenciarAgenda.Name = "TsmGerenciarAgenda";
-            this.TsmGerenciarAgenda.Size = new System.Drawing.Size(175, 22);
+            this.TsmGerenciarAgenda.Size = new System.Drawing.Size(180, 22);
             this.TsmGerenciarAgenda.Text = "Genrenciar Agenda";
             // 
             // TsmRelatorio

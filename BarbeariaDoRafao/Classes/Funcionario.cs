@@ -83,6 +83,33 @@ namespace BarbeariaDoRafao.Classes
             }
         }
 
+        public static List<Funcionario> Buscar(List<Funcionario> funcionarios, int indexCbbBuscar, string texto)
+        {
+            switch (indexCbbBuscar)
+            {
+                case 0:
+
+                    return funcionarios.Where(a => a.Nome.ToUpper().Contains(texto.ToUpper())).ToList();
+
+                case 1:
+
+
+                    return funcionarios.Where(a => a.Email.Contains(texto)).ToList();
+
+
+                case 2:
+
+
+                    return funcionarios.Where(a => a.Id == Convert.ToInt32(texto)).ToList();
+
+                default:
+
+
+                    return funcionarios;
+
+            }
+        }
+
         public void Excluir()
         {
             string query = string.Format($"UPDATE Funcionario SET Ativo = 0 WHERE Id = {Id}");

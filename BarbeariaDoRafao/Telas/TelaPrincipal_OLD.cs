@@ -65,5 +65,11 @@ namespace BarbeariaDoRafao.Telas
             CadastrarFuncionario cadastrarFuncionario = new CadastrarFuncionario();
             cadastrarFuncionario.ShowDialog();
         }
+
+        private void TsmCadastarServico_Click(object sender, EventArgs e)
+        {
+            CadastarServicoscs cadastarServicoscs = new CadastarServicoscs();
+            cadastarServicoscs.ShowDialog();
+        }
     }
 }

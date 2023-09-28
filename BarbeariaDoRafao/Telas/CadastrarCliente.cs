@@ -13,8 +13,8 @@ namespace BarbeariaDoRafao.Telas
 {
     public partial class CadastrarCliente : Form
     {
-        Cliente _clienteSelecionado;
-        List<Cliente> _clientes;
+       private Cliente _clienteSelecionado;
+       private List<Cliente> _clientes;
 
         public CadastrarCliente()
         {
