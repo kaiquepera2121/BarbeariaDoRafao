@@ -9,7 +9,7 @@ namespace BarbeariaDoRafao.Telas
     public partial class CadastarServicoscs : Form
     {
         private Servico _servicoSelecionado;
-        private List<Servico> _servico;
+        private List<Servico> _servico = new List<Servico>();
 
         public CadastarServicoscs()
         {
@@ -80,9 +80,13 @@ namespace BarbeariaDoRafao.Telas
         {
             try
             {
-                Servico servico = new Servico(0, TxtNome.Text, Convert.ToDouble(TxtValor.Text), Convert.ToInt32(TxtTempoEstimado.Text), true);
+                Servico servico = new Servico(0
+                    , TxtNome.Text
+                    , Convert.ToDouble(TxtValor.Text)
+                    , Convert.ToInt32(TxtTempoEstimado.Text)
+                    , true);
 
-                servico.Cadastrar(_servico);
+                servico.CadastrarServicos(_servico);
                 CarregaDgvUsuarios();
                 LimpaCampos();
             }
@@ -122,18 +126,21 @@ namespace BarbeariaDoRafao.Telas
                 if (DgvUsuarios.Rows.Count < 1 || DgvUsuarios.SelectedRows.Count < 1)
                     return;
 
-                TxtNome.Text = _servicoSelecionado.Nome;
-                TxtValor.Text = _servicoSelecionado.Valor.ToString();
-                TxtTempoEstimado.Text = _servicoSelecionado.TempoEstimado.ToString();
-                TxtId.Text = _servicoSelecionado.Id.ToString();
+                //TxtNome.Text = _servicoSelecionado.Nome;
+                //TxtValor.Text = _servicoSelecionado.Valor.ToString();
+                //TxtTempoEstimado.Text = _servicoSelecionado.TempoEstimado.ToString();
+                //TxtId.Text = _servicoSelecionado.Id.ToString();
 
                 BtnCadastrar.Enabled = false;
                 BtnAlterar.Enabled = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show(ex.Message,
+                      "Erro",
+                      MessageBoxButtons.OK,
+                      MessageBoxIcon.Error);
             }
 
 

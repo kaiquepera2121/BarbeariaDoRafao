@@ -70,7 +70,7 @@
             this.DgvUsuarios.ReadOnly = true;
             this.DgvUsuarios.RowHeadersVisible = false;
             this.DgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvUsuarios.Size = new System.Drawing.Size(1138, 166);
+            this.DgvUsuarios.Size = new System.Drawing.Size(1138, 299);
             this.DgvUsuarios.TabIndex = 3;
             this.DgvUsuarios.SelectionChanged += new System.EventHandler(this.DgvUsuarios_SelectionChanged);
             this.DgvUsuarios.DoubleClick += new System.EventHandler(this.DgvUsuarios_DoubleClick);

@@ -214,9 +214,9 @@
             this.toolStripStatusLabel4,
             this.TslAcesso,
             this.TslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 775);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1460, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(1125, 27);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -275,7 +275,7 @@
             this.TslDataHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslDataHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.TslDataHora.Name = "TslDataHora";
-            this.TslDataHora.Size = new System.Drawing.Size(368, 22);
+            this.TslDataHora.Size = new System.Drawing.Size(399, 22);
             this.TslDataHora.Spring = true;
             this.TslDataHora.Text = "27/09/2023 00:00";
             this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -381,7 +381,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-
             this.ClientSize = new System.Drawing.Size(1125, 679);
             this.Controls.Add(this.BtnGerenciar);
             this.Controls.Add(this.BtnClientes);

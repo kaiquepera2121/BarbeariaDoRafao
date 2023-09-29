@@ -97,7 +97,7 @@ namespace BarbeariaDoRafao.Classes
 
         public void Alterar()
         {
-            string query = string.Format($"UPDATE Servico SET Nome = '{Nome}', Valor = {Valor:C2}, TempoEstimado = {TempoEstimado:F2} WHERE Id = {Id}");
+            string query = string.Format($"UPDATE Servico SET Nome = '{Nome}', Valor = {Valor}, TempoEstimado = {TempoEstimado} WHERE Id = {Id}");
             Conexao cn = new Conexao(query);
             try
             {
@@ -114,7 +114,7 @@ namespace BarbeariaDoRafao.Classes
             }
         }
 
-        public void Cadastrar(List<Servico> servicos)
+        public void CadastrarServicos(List<Servico> servicos)
         {
             string query = string.Format($" INSERT INTO Servico VALUES ('{Nome}',{Valor},{TempoEstimado},1)");
             query += "; SELECT SCOPE_IDENTITY()";
@@ -131,13 +131,13 @@ namespace BarbeariaDoRafao.Classes
 
                 throw;
             }
+            
         }
 
         public static List<Servico> BuscarServicos()
         {
             {
-
-                string query = string.Format($"SELECT * FROM Servico");
+                string query = string.Format($"Select * from Servico");
                 Conexao cn = new Conexao(query);
 
                 List<Servico> servicos = new List<Servico>();
@@ -154,7 +154,7 @@ namespace BarbeariaDoRafao.Classes
                             Id = Convert.ToInt32(cn.dr[0]),
                             Nome = cn.dr[1].ToString(),
                             Valor = Convert.ToDouble(cn.dr[2]),
-                            TempoEstimado = Convert.ToInt32((int)cn.dr[3]),
+                            TempoEstimado = Convert.ToInt32(cn.dr[3]),
                             Ativo = Convert.ToBoolean(cn.dr[4]),
 
                         });
