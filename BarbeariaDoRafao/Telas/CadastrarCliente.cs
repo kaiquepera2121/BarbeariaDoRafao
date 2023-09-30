@@ -237,11 +237,12 @@ namespace BarbeariaDoRafao.Telas
         {
             TxtNome.Clear();
             TxtEmail.Clear();
+            TxtBuscar.Clear();
             RdbHomem.Checked = true;
             RdbMulher.Checked = false;
             BtnCadastrar.Enabled = true;
             BtnAlterar.Enabled = false;
-
+            
         }
 
         private void BtnBuscar_Click(object sender, EventArgs e)

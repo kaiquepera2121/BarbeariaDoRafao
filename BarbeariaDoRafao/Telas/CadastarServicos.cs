@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace BarbeariaDoRafao.Telas
 {
-    public partial class CadastarServicoscs : Form
+    public partial class CadastarServicos : Form
     {
         private Servico _servicoSelecionado;
         private List<Servico> _servico = new List<Servico>();
 
-        public CadastarServicoscs()
+        public CadastarServicos()
         {
             InitializeComponent();
 
@@ -65,6 +65,7 @@ namespace BarbeariaDoRafao.Telas
             TxtId.Clear();
             TxtBuscar.Clear();
             TxtValor.Clear();
+            TxtTempoEstimado.Clear();
             BtnCadastrar.Enabled = true;
             BtnAlterar.Enabled = false;
         }
@@ -126,10 +127,12 @@ namespace BarbeariaDoRafao.Telas
                 if (DgvUsuarios.Rows.Count < 1 || DgvUsuarios.SelectedRows.Count < 1)
                     return;
 
-                //TxtNome.Text = _servicoSelecionado.Nome;
-                //TxtValor.Text = _servicoSelecionado.Valor.ToString();
-                //TxtTempoEstimado.Text = _servicoSelecionado.TempoEstimado.ToString();
-                //TxtId.Text = _servicoSelecionado.Id.ToString();
+
+                _servicoSelecionado = _servico.Find(a => a.Id == (int)DgvUsuarios.SelectedRows[0].Cells[0].Value);
+                TxtNome.Text = _servicoSelecionado.Nome;
+                TxtValor.Text = _servicoSelecionado.Valor.ToString();
+                TxtTempoEstimado.Text = _servicoSelecionado.TempoEstimado.ToString();
+                TxtId.Text = _servicoSelecionado.Id.ToString();
 
                 BtnCadastrar.Enabled = false;
                 BtnAlterar.Enabled = true;

@@ -1,6 +1,6 @@
 ﻿namespace BarbeariaDoRafao.Telas
 {
-    partial class CadastarServicoscs
+    partial class CadastarServicos
     {
         /// <summary>
         /// Required designer variable.

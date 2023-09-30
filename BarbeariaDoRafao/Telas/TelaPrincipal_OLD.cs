@@ -68,7 +68,7 @@ namespace BarbeariaDoRafao.Telas
 
         private void TsmCadastarServico_Click(object sender, EventArgs e)
         {
-            CadastarServicoscs cadastarServicoscs = new CadastarServicoscs();
+            CadastarServicos cadastarServicoscs = new CadastarServicos();
             cadastarServicoscs.ShowDialog();
         }
     }

@@ -53,7 +53,6 @@
             this.BtnFuncionarios = new System.Windows.Forms.Button();
             this.BtnFaturamento = new System.Windows.Forms.Button();
             this.BtnGerenciar = new System.Windows.Forms.Button();
-            this.BtnHome = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -288,6 +287,7 @@
             this.BtnFuncionarios.TabIndex = 27;
             this.BtnFuncionarios.Text = "Funcionários";
             this.BtnFuncionarios.UseVisualStyleBackColor = false;
+            this.BtnFuncionarios.Click += new System.EventHandler(this.BtnFuncionarios_Click);
             // 
             // BtnFaturamento
             // 
@@ -316,20 +316,7 @@
             this.BtnGerenciar.TabIndex = 30;
             this.BtnGerenciar.Text = "Gerenciar Cadastro";
             this.BtnGerenciar.UseVisualStyleBackColor = false;
-            // 
-            // BtnHome
-            // 
-            this.BtnHome.AutoSize = true;
-            this.BtnHome.BackColor = System.Drawing.Color.Transparent;
-            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnHome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnHome.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnHome.Location = new System.Drawing.Point(273, 21);
-            this.BtnHome.Name = "BtnHome";
-            this.BtnHome.Size = new System.Drawing.Size(88, 33);
-            this.BtnHome.TabIndex = 32;
-            this.BtnHome.Text = "Home";
-            this.BtnHome.UseVisualStyleBackColor = false;
+            this.BtnGerenciar.Click += new System.EventHandler(this.BtnGerenciar_Click);
             // 
             // label2
             // 
@@ -350,7 +337,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1125, 679);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.BtnHome);
             this.Controls.Add(this.BtnGerenciar);
             this.Controls.Add(this.BtnFaturamento);
             this.Controls.Add(this.BtnFuncionarios);
@@ -412,7 +398,6 @@
         public System.Windows.Forms.Button BtnFuncionarios;
         public System.Windows.Forms.Button BtnFaturamento;
         public System.Windows.Forms.Button BtnGerenciar;
-        public System.Windows.Forms.Button BtnHome;
         private System.Windows.Forms.Label label2;
     }
 }

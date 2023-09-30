@@ -27,7 +27,7 @@ namespace BarbeariaDoRafao
 
                 Usuarios usuarios = Usuarios.RealizarLogin(TxtEmail.Text, TxtSenha.Text);
 
-                TelaPrincipal_OLD principal = new TelaPrincipal_OLD((Funcionario)usuarios);
+                TelaPrincipal principal = new TelaPrincipal((Funcionario)usuarios);
                 this.Hide();
                 principal.ShowDialog();
                 this.Show();

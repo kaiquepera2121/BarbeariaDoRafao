@@ -53,11 +53,17 @@
     <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Servicos.cs" />
     <Compile Include="Classes\Usuarios.cs" />
-    <Compile Include="Telas\CadastarServicoscs.cs">
+    <Compile Include="Telas\Agendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\CadastarServicoscs.Designer.cs">
-      <DependentUpon>CadastarServicoscs.cs</DependentUpon>
+    <Compile Include="Telas\Agendamento.Designer.cs">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastarServicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\CadastarServicos.Designer.cs">
+      <DependentUpon>CadastarServicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\CadastrarCliente.cs">
       <SubType>Form</SubType>
@@ -70,6 +76,18 @@
     </Compile>
     <Compile Include="Telas\CadastrarFuncionario.Designer.cs">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\CadastrarTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\CadastrarTela.Designer.cs">
+      <DependentUpon>CadastrarTela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\FuncionarioLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\FuncionarioLista.Designer.cs">
+      <DependentUpon>FuncionarioLista.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaLogin.cs">
       <SubType>Form</SubType>
@@ -101,14 +119,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Telas\CadastarServicoscs.resx">
-      <DependentUpon>CadastarServicoscs.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Agendamento.resx">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\CadastarServicos.resx">
+      <DependentUpon>CadastarServicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\CadastrarCliente.resx">
       <DependentUpon>CadastrarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\CadastrarFuncionario.resx">
       <DependentUpon>CadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\CadastrarTela.resx">
+      <DependentUpon>CadastrarTela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\FuncionarioLista.resx">
+      <DependentUpon>FuncionarioLista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>

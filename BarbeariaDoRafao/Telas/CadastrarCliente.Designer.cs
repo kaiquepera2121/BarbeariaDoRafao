@@ -39,19 +39,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtBuscar = new System.Windows.Forms.TextBox();
+            this.CbbBuscar = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RdbMulher = new System.Windows.Forms.RadioButton();
+            this.RdbHomem = new System.Windows.Forms.RadioButton();
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.TmrCadastro = new System.Windows.Forms.Timer(this.components);
             this.BtnAlterar = new System.Windows.Forms.Button();
             this.BtnLimapr = new System.Windows.Forms.Button();
-            this.RdbHomem = new System.Windows.Forms.RadioButton();
-            this.RdbMulher = new System.Windows.Forms.RadioButton();
-            this.CbbBuscar = new System.Windows.Forms.ComboBox();
-            this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -166,6 +166,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente Cadastro:";
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Location = new System.Drawing.Point(671, 154);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(97, 68);
+            this.BtnBuscar.TabIndex = 19;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(380, 178);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 23);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Buscar:";
+            // 
+            // TxtBuscar
+            // 
+            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBuscar.Location = new System.Drawing.Point(384, 204);
+            this.TxtBuscar.Name = "TxtBuscar";
+            this.TxtBuscar.Size = new System.Drawing.Size(256, 26);
+            this.TxtBuscar.TabIndex = 19;
+            // 
+            // CbbBuscar
+            // 
+            this.CbbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbbBuscar.FormattingEnabled = true;
+            this.CbbBuscar.Items.AddRange(new object[] {
+            "Nome",
+            "E-mail",
+            "Id"});
+            this.CbbBuscar.Location = new System.Drawing.Point(384, 144);
+            this.CbbBuscar.Name = "CbbBuscar";
+            this.CbbBuscar.Size = new System.Drawing.Size(256, 28);
+            this.CbbBuscar.TabIndex = 15;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.RdbMulher);
@@ -176,6 +217,28 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gênero";
+            // 
+            // RdbMulher
+            // 
+            this.RdbMulher.AutoSize = true;
+            this.RdbMulher.Location = new System.Drawing.Point(6, 58);
+            this.RdbMulher.Name = "RdbMulher";
+            this.RdbMulher.Size = new System.Drawing.Size(75, 24);
+            this.RdbMulher.TabIndex = 20;
+            this.RdbMulher.Text = "Mulher";
+            this.RdbMulher.UseVisualStyleBackColor = true;
+            // 
+            // RdbHomem
+            // 
+            this.RdbHomem.AutoSize = true;
+            this.RdbHomem.Checked = true;
+            this.RdbHomem.Location = new System.Drawing.Point(6, 28);
+            this.RdbHomem.Name = "RdbHomem";
+            this.RdbHomem.Size = new System.Drawing.Size(83, 24);
+            this.RdbHomem.TabIndex = 19;
+            this.RdbHomem.TabStop = true;
+            this.RdbHomem.Text = "Homem";
+            this.RdbHomem.UseVisualStyleBackColor = true;
             // 
             // BtnCadastrar
             // 
@@ -224,68 +287,6 @@
             this.BtnLimapr.Text = "Limpar";
             this.BtnLimapr.UseVisualStyleBackColor = true;
             this.BtnLimapr.Click += new System.EventHandler(this.BtnLimapr_Click);
-            // 
-            // RdbHomem
-            // 
-            this.RdbHomem.AutoSize = true;
-            this.RdbHomem.Checked = true;
-            this.RdbHomem.Location = new System.Drawing.Point(6, 28);
-            this.RdbHomem.Name = "RdbHomem";
-            this.RdbHomem.Size = new System.Drawing.Size(83, 24);
-            this.RdbHomem.TabIndex = 19;
-            this.RdbHomem.Text = "Homem";
-            this.RdbHomem.UseVisualStyleBackColor = true;
-            // 
-            // RdbMulher
-            // 
-            this.RdbMulher.AutoSize = true;
-            this.RdbMulher.Location = new System.Drawing.Point(6, 58);
-            this.RdbMulher.Name = "RdbMulher";
-            this.RdbMulher.Size = new System.Drawing.Size(75, 24);
-            this.RdbMulher.TabIndex = 20;
-            this.RdbMulher.Text = "Mulher";
-            this.RdbMulher.UseVisualStyleBackColor = true;
-            // 
-            // CbbBuscar
-            // 
-            this.CbbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbbBuscar.FormattingEnabled = true;
-            this.CbbBuscar.Items.AddRange(new object[] {
-            "Nome",
-            "E-mail",
-            "Id"});
-            this.CbbBuscar.Location = new System.Drawing.Point(384, 144);
-            this.CbbBuscar.Name = "CbbBuscar";
-            this.CbbBuscar.Size = new System.Drawing.Size(256, 28);
-            this.CbbBuscar.TabIndex = 15;
-            // 
-            // TxtBuscar
-            // 
-            this.TxtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtBuscar.Location = new System.Drawing.Point(384, 204);
-            this.TxtBuscar.Name = "TxtBuscar";
-            this.TxtBuscar.Size = new System.Drawing.Size(256, 26);
-            this.TxtBuscar.TabIndex = 19;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(380, 178);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 23);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Buscar:";
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.Location = new System.Drawing.Point(671, 154);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(97, 68);
-            this.BtnBuscar.TabIndex = 19;
-            this.BtnBuscar.Text = "Buscar";
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // CadastrarCliente
             // 
