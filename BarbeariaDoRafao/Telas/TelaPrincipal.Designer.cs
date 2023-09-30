@@ -67,9 +67,9 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 11);
+            this.dataGridView1.Location = new System.Drawing.Point(12, -4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(238, 642);
+            this.dataGridView1.Size = new System.Drawing.Size(238, 924);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -78,7 +78,7 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label1.Location = new System.Drawing.Point(41, 99);
+            this.label1.Location = new System.Drawing.Point(41, 157);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 36);
             this.label1.TabIndex = 1;
@@ -89,18 +89,19 @@
             this.label8.BackColor = System.Drawing.Color.Black;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label8.Location = new System.Drawing.Point(71, 607);
+            this.label8.Location = new System.Drawing.Point(71, 849);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 34);
             this.label8.TabIndex = 9;
             this.label8.Text = "Since 1995";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Black;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label9.Location = new System.Drawing.Point(174, 606);
+            this.label9.Location = new System.Drawing.Point(171, 848);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 34);
             this.label9.TabIndex = 10;
@@ -111,11 +112,12 @@
             this.label11.BackColor = System.Drawing.Color.Black;
             this.label11.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.label11.Location = new System.Drawing.Point(213, 96);
+            this.label11.Location = new System.Drawing.Point(211, 157);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(28, 24);
             this.label11.TabIndex = 12;
             this.label11.Text = "™";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // BtnPerfil
             // 
@@ -124,18 +126,19 @@
             this.BtnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPerfil.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnPerfil.Location = new System.Drawing.Point(941, 16);
+            this.BtnPerfil.Location = new System.Drawing.Point(1706, 18);
             this.BtnPerfil.Name = "BtnPerfil";
             this.BtnPerfil.Size = new System.Drawing.Size(165, 38);
             this.BtnPerfil.TabIndex = 17;
             this.BtnPerfil.Text = "Perfil";
             this.BtnPerfil.UseVisualStyleBackColor = false;
+            this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(846, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(1603, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(22, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,9 +147,9 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(889, 21);
+            this.pictureBox3.Location = new System.Drawing.Point(1631, 21);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(37, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +162,7 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(258, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(857, 10);
+            this.groupBox1.Size = new System.Drawing.Size(1634, 10);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
             // 
@@ -182,9 +185,9 @@
             this.toolStripStatusLabel4,
             this.TslAcesso,
             this.TslDataHora});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 652);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1014);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1125, 27);
+            this.statusStrip1.Size = new System.Drawing.Size(1904, 27);
             this.statusStrip1.TabIndex = 22;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -243,7 +246,7 @@
             this.TslDataHora.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TslDataHora.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.TslDataHora.Name = "TslDataHora";
-            this.TslDataHora.Size = new System.Drawing.Size(399, 22);
+            this.TslDataHora.Size = new System.Drawing.Size(1178, 22);
             this.TslDataHora.Spring = true;
             this.TslDataHora.Text = "27/09/2023 00:00";
             this.TslDataHora.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -252,9 +255,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Black;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(76, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(62, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 116);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -266,7 +269,7 @@
             this.BtnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgenda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgenda.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnAgenda.Location = new System.Drawing.Point(48, 286);
+            this.BtnAgenda.Location = new System.Drawing.Point(48, 410);
             this.BtnAgenda.Name = "BtnAgenda";
             this.BtnAgenda.Size = new System.Drawing.Size(165, 39);
             this.BtnAgenda.TabIndex = 25;
@@ -281,7 +284,7 @@
             this.BtnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFuncionarios.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFuncionarios.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnFuncionarios.Location = new System.Drawing.Point(48, 386);
+            this.BtnFuncionarios.Location = new System.Drawing.Point(48, 527);
             this.BtnFuncionarios.Name = "BtnFuncionarios";
             this.BtnFuncionarios.Size = new System.Drawing.Size(165, 45);
             this.BtnFuncionarios.TabIndex = 27;
@@ -296,7 +299,7 @@
             this.BtnFaturamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFaturamento.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFaturamento.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnFaturamento.Location = new System.Drawing.Point(48, 492);
+            this.BtnFaturamento.Location = new System.Drawing.Point(48, 653);
             this.BtnFaturamento.Name = "BtnFaturamento";
             this.BtnFaturamento.Size = new System.Drawing.Size(165, 44);
             this.BtnFaturamento.TabIndex = 28;
@@ -310,22 +313,25 @@
             this.BtnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGerenciar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGerenciar.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnGerenciar.Location = new System.Drawing.Point(27, 182);
+            this.BtnGerenciar.Location = new System.Drawing.Point(27, 304);
             this.BtnGerenciar.Name = "BtnGerenciar";
             this.BtnGerenciar.Size = new System.Drawing.Size(206, 46);
             this.BtnGerenciar.TabIndex = 30;
             this.BtnGerenciar.Text = "Gerenciar Cadastro";
             this.BtnGerenciar.UseVisualStyleBackColor = false;
+<<<<<<< Updated upstream
             this.BtnGerenciar.Click += new System.EventHandler(this.BtnGerenciar_Click);
+=======
+>>>>>>> Stashed changes
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(980, 608);
+            this.label2.Location = new System.Drawing.Point(264, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 33);
+            this.label2.Size = new System.Drawing.Size(142, 30);
             this.label2.TabIndex = 33;
             this.label2.Text = "Bem-Vindo(a) !";
             // 
@@ -335,7 +341,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1125, 679);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnGerenciar);
             this.Controls.Add(this.BtnFaturamento);

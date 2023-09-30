@@ -60,6 +60,7 @@ namespace BarbeariaDoRafao.Telas
 
         }
 
+<<<<<<< Updated upstream
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
             FuncionarioLista funcionario = new FuncionarioLista();
@@ -70,6 +71,26 @@ namespace BarbeariaDoRafao.Telas
         {
             CadastrarTela cadastrar = new CadastrarTela(_userLogado);
             cadastrar.ShowDialog();
+=======
+        private void BtnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnFuncionarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> Stashed changes
         }
     }
 }

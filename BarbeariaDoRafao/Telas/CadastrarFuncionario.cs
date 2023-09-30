@@ -240,5 +240,10 @@ namespace BarbeariaDoRafao.Telas
             List<Funcionario> lista = Funcionario.Buscar(_funcionario, CbbBuscar.SelectedIndex, TxtBuscar.Text);
             CarregaDgvUsuarios(lista);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
