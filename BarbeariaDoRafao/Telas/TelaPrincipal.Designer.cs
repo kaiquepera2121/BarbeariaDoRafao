@@ -94,7 +94,7 @@
             this.label8.Size = new System.Drawing.Size(107, 34);
             this.label8.TabIndex = 9;
             this.label8.Text = "Since 1995";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+ 
             // 
             // label9
             // 
@@ -117,7 +117,7 @@
             this.label11.Size = new System.Drawing.Size(28, 24);
             this.label11.TabIndex = 12;
             this.label11.Text = "™";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+      
             // 
             // BtnPerfil
             // 
@@ -132,7 +132,7 @@
             this.BtnPerfil.TabIndex = 17;
             this.BtnPerfil.Text = "Perfil";
             this.BtnPerfil.UseVisualStyleBackColor = false;
-            this.BtnPerfil.Click += new System.EventHandler(this.BtnPerfil_Click);
+
             // 
             // pictureBox2
             // 
@@ -319,10 +319,9 @@
             this.BtnGerenciar.TabIndex = 30;
             this.BtnGerenciar.Text = "Gerenciar Cadastro";
             this.BtnGerenciar.UseVisualStyleBackColor = false;
-<<<<<<< Updated upstream
+
             this.BtnGerenciar.Click += new System.EventHandler(this.BtnGerenciar_Click);
-=======
->>>>>>> Stashed changes
+
             // 
             // label2
             // 

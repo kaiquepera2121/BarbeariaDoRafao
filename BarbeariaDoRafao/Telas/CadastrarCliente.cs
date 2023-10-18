@@ -193,7 +193,7 @@ namespace BarbeariaDoRafao.Telas
                 TxtEmail.Text = _clienteSelecionado.Email;
                 TxtNome.Text = _clienteSelecionado.Nome;
                 TxtId.Text = _clienteSelecionado.Id.ToString();
-                BtnCadastrar.Enabled = false;
+                //BtnCadastrar.Enabled = false;
                 BtnAlterar.Enabled = true;
                 if (_clienteSelecionado.Genero == "Masculino")
                 {
@@ -240,7 +240,7 @@ namespace BarbeariaDoRafao.Telas
             TxtBuscar.Clear();
             RdbHomem.Checked = true;
             RdbMulher.Checked = false;
-            BtnCadastrar.Enabled = true;
+            //.Enabled = true;
             BtnAlterar.Enabled = false;
             
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFuncionario));
             this.DgvUsuarios = new System.Windows.Forms.DataGridView();
             this.TxtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -68,13 +69,13 @@
             this.DgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvUsuarios.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.DgvUsuarios.Location = new System.Drawing.Point(18, 346);
+            this.DgvUsuarios.Location = new System.Drawing.Point(50, 376);
             this.DgvUsuarios.MultiSelect = false;
             this.DgvUsuarios.Name = "DgvUsuarios";
             this.DgvUsuarios.ReadOnly = true;
             this.DgvUsuarios.RowHeadersVisible = false;
             this.DgvUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvUsuarios.Size = new System.Drawing.Size(1863, 683);
+            this.DgvUsuarios.Size = new System.Drawing.Size(1776, 579);
             this.DgvUsuarios.TabIndex = 3;
             this.DgvUsuarios.SelectionChanged += new System.EventHandler(this.DgvUsuarios_SelectionChanged);
             this.DgvUsuarios.DoubleClick += new System.EventHandler(this.DgvUsuarios_DoubleClick);
@@ -171,9 +172,9 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBox1.Location = new System.Drawing.Point(92, 27);
+            this.groupBox1.Location = new System.Drawing.Point(40, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1112, 275);
+            this.groupBox1.Size = new System.Drawing.Size(1164, 275);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cadastrar Funcionário:";
@@ -233,7 +234,7 @@
             this.BtnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAlterar.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnAlterar.Location = new System.Drawing.Point(1716, 97);
+            this.BtnAlterar.Location = new System.Drawing.Point(1716, 107);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(149, 45);
             this.BtnAlterar.TabIndex = 18;
@@ -247,7 +248,7 @@
             this.BtnLimapr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLimapr.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimapr.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.BtnLimapr.Location = new System.Drawing.Point(1716, 231);
+            this.BtnLimapr.Location = new System.Drawing.Point(1716, 261);
             this.BtnLimapr.Name = "BtnLimapr";
             this.BtnLimapr.Size = new System.Drawing.Size(151, 45);
             this.BtnLimapr.TabIndex = 19;
@@ -276,7 +277,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.MediumSlateBlue;
-            this.button2.Location = new System.Drawing.Point(1716, 166);
+            this.button2.Location = new System.Drawing.Point(1718, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 43);
             this.button2.TabIndex = 21;
@@ -324,9 +325,9 @@
             this.groupBox2.Controls.Add(this.TxtBuscar);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.groupBox2.Location = new System.Drawing.Point(1292, 27);
+            this.groupBox2.Location = new System.Drawing.Point(1292, 29);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(276, 165);
+            this.groupBox2.Size = new System.Drawing.Size(340, 180);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fazer busca:";
@@ -346,9 +347,9 @@
             this.btnCadastar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastar.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnCadastar.Location = new System.Drawing.Point(1296, 216);
+            this.btnCadastar.Location = new System.Drawing.Point(1292, 246);
             this.btnCadastar.Name = "btnCadastar";
-            this.btnCadastar.Size = new System.Drawing.Size(272, 60);
+            this.btnCadastar.Size = new System.Drawing.Size(334, 60);
             this.btnCadastar.TabIndex = 26;
             this.btnCadastar.Text = "Buscar";
             this.btnCadastar.UseVisualStyleBackColor = false;
@@ -359,6 +360,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.btnCadastar);
             this.Controls.Add(this.groupBox2);
@@ -370,7 +372,7 @@
             this.Controls.Add(this.DgvUsuarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CadastrarFuncionario";
-            this.Text = "CadastrarFuncionario";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.CadastrarFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvUsuarios)).EndInit();
             this.groupBox1.ResumeLayout(false);
