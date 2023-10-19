@@ -60,7 +60,6 @@ namespace BarbeariaDoRafao.Telas
 
         }
 
-
         private void BtnFuncionarios_Click(object sender, EventArgs e)
         {
             FuncionarioLista funcionario = new FuncionarioLista();
@@ -73,6 +72,5 @@ namespace BarbeariaDoRafao.Telas
             cadastrar.ShowDialog();
 
         }
-
     }
 }
